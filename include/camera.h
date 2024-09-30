@@ -34,6 +34,7 @@ public:
         outfile << "P3\n"
                 << image_width << ' ' << image_height << "\n255\n";
 
+        // Todo: add multi-threading support and/or GPU acceleration
         for (int j = 0; j < image_height; j++)
         {
             std::clog << "\rScanlines remaining: " << (image_height - j) << ' ' << std::flush;
