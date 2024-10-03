@@ -37,12 +37,11 @@ inline double random_double(double min, double max)
     return min + (max - min) * random_double();
 }
 
-/* inline double random_double()
+inline int random_int(int min, int max)
 {
-    static std::uniform_real_distribution<double> distribution(0.0, 1.0);
-    static std::mt19937 generator;
-    return distribution(generator);
-} */
+    // Returns a random integer in [min,max].
+    return int(random_double(min, max + 1));
+}
 
 // Common Headers
 
